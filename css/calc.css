@@ -1,73 +1,68 @@
-body{
+body {
     background-color: #080808;
 }
 
-div{
-	background-color: #101111;
-	margin: 50px;
-	width: 350px;
-	height: 550px;
-	margin: 0 auto;			
-	border-radius: 20px;
-	padding: 10px;
+div {
+    background-color: #101111;
+    margin: 0 auto;
+    width: 350px;
+    height: 550px;
+    border-radius: 20px;
+    padding: 10px;
 }
 
-header{
-	background-color: #f3f2f2;
-	width: 330px;
-	height: 100px;
-	border-radius: 20px;
-	margin: 0 auto;	
-	font-size: xx-large;
-	color: #000000;
-	text-align: match-parent;
-
+header {
+    background-color: #f3f2f2;
+    width: 330px;
+    height: 100px;
+    border-radius: 20px;
+    margin: 0 auto;
+    font-size: xx-large;
+    color: #000000;
+    text-align: center; /* Changed to center */
 }
 
-table{
-	background-color: #0a0a0a;
-	margin: 0 auto;
-	margin-top: 20px;
-	margin-right: 10px;
-	margin-left: 10px;
-	border-radius: 20px;
-	cursor: auto;
-
+table {
+    background-color: #0a0a0a;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 20px;
+    cursor: pointer; /* Changed to pointer for entire table */
 }
+
 button {
-	padding: 10px;
-	width: 75px;
-	height: 45px;
-	margin-top: 10px;
-	background-color: rgb(229, 226, 226);
-	color: black;
-	font-size: 20px;
-	cursor: pointer;
-	
-}
-button:hover{
-	background-color: linen;
-	cursor:navy;
+    padding: 10px;
+    width: 75px;
+    height: 45px;
+    margin-top: 10px;
+    background-color: rgb(229, 226, 226);
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
 }
 
-td{
-	width: 110px;
-	height: 60px;
-	text-align: center;
-	font-size: xx-large;
-	cursor: pointer;
-
+button:hover {
+    background-color: linen;
+    cursor: pointer; /* Changed to pointer */
 }
 
-td:active{
-	background-color: #e0e0d1;
-	border-radius: 20px;
+td {
+    width: 110px;
+    height: 60px;
+    text-align: center;
+    font-size: xx-large;
+    cursor: pointer;
 }
 
-.orange{
-	color: #dbb716;
-}
-.white{
-	color: #f8f8f5;
+td:active {
+    background-color: #e0e0d1;
+    border-radius: 20px;
 }
 
+.orange {
+    color: #dbb716;
+}
+
+.white {
+    color: #f8f8f5;
+}
