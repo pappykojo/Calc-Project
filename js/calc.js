@@ -1,61 +1,37 @@
+// Initialize variables
 var a = '';
 var b = '';
 var num = [];
-var ans;
+var ans = 0;
 
-// All the numbers and operators input will be stored in an array "num" using function "sendNum()"
-function sendNum(digit){
-
-	num.push(digit);
-
-	if(num.length != 1){
-		a = '';
-		document.getElementById('screen').innerHTML = a;		// clearing the screen.
-	}
-
-
-	for(i=0; i<num.length ; i++){
-
-		a = a + num[i];				// concatenate the elements of the array "num" into a single string, which will be displayed on the screen
-		
-	}
-
-document.getElementById('screen').innerHTML = a;	// displaying the concatenated string
-
-	
+// Function to handle number and operator inputs
+function sendNum(digit) {
+    num.push(digit);
+    if (num.length !== 1) {
+        a = '';
+        document.getElementById('screen').innerHTML = a; // Clearing the screen.
+    }
+    a = num.join(''); // Concatenate the elements of the array "num" into a single string.
+    document.getElementById('screen').innerHTML = a; // Display the concatenated string.
 }
 
-// when the user presses "=", function "equalTo()" is called 
-function equalTo(){
-	document.getElementById('screen').innerHTML = '';
-
-	for(i=0; i<num.length ; i++){
-
-		b += num[i];						// concatenating the array "num" into a single string
-	}
-
-	ans = eval(b);	
-
-	document.getElementById('screen').innerHTML = ans;		// result display
-
-	while(num.length > 0){
-    	num.pop();				// emptying the array "num"
-	}
-
-	num.push(ans.toString());
-
-	
+// Function to calculate and display the result
+function equalTo() {
+    document.getElementById('screen').innerHTML = '';
+    b = num.join(''); // Concatenate the array "num" into a single string.
+    ans = eval(b);
+    if (isNaN(ans) || !isFinite(ans)) {
+        document.getElementById('screen').innerHTML = 'Error';
+    } else {
+        document.getElementById('screen').innerHTML = ans; // Display the result.
+    }
+    num = [ans.toString()]; // Reset "num" with the result.
 }
 
-
-// When user presses "Clear", function "clearScr()" is called
-function clearScr(){
-	document.getElementById('screen').innerHTML = '';
-	
-	while(num.length > 0){
-    	num.pop();				// emptying the array "num"
-	}
-
-	a ='';	
-	b ='';
+// Function to clear the screen and reset variables
+function clearScr() {
+    document.getElementById('screen').innerHTML = '';
+    num = [];
+    a = '';
+    b = '';
 }
